@@ -1,7 +1,6 @@
 import logging
 import os
 from telegram.ext import Application
-from src.config import TOKEN
 from src.db import initialize_database
 from src.handlers.start_handler import start_handler
 from src.handlers.button_handler import button_handler, final_confirm_vote_handler, cancel_vote_handler
@@ -55,7 +54,7 @@ def main():
     initialize_database()
 
     # Create the Application and pass it your bot's token.
-    application = Application.builder().token(TOKEN).build()
+    application = Application.builder().token("7470264967:AAHTssrBhJ2IyNOpzdCGMTlaANqf8B2Je-k").build()
 
     # Register handlers
     application.add_handler(start_handler)
